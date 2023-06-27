@@ -5,8 +5,8 @@ javascript is cool but python is cooler :smile:<br>
 Install Jest, Babel, and ESLint 
 in your project directory:
 ```bash
-Install Jest using: npm install --save-dev jest
-Install Babel using: npm install --save-dev babel-jest @babel/core @babel/preset-env @babel/cli @babel/node
-Install ESLint using: npm install --save-dev eslint
-Install plugins using: npm install --save-dev eslint-config-airbnb-base eslint-plugin-import eslint-plugin-jest
+npm install --save-dev jest
+npm install --save-dev babel-jest @babel/core @babel/preset-env @babel/cli @babel/node
+npm install --save-dev eslint
+npm install --save-dev eslint-config-airbnb-base eslint-plugin-import eslint-plugin-jest
 ```
