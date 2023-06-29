@@ -1,12 +1,9 @@
 /* eslint-disable no-underscore-dangle */
 export default class Car {
   constructor(brand, motor, color) {
-    if ((typeof brand && typeof motor && typeof color) !== 'string') {
-      throw TypeError('brand, motor and color must be strings');
-    }
-    this._brand = brand;
-    this._motor = motor;
-    this._color = color;
+    this.brand = brand;
+    this.motor = motor;
+    this.color = color;
   }
 
   get brand() {
