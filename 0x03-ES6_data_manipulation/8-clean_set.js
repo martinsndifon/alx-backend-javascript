@@ -4,7 +4,7 @@ export default function cleanSet(set, startString) {
   }
   const arr = [];
   for (const elem of set) {
-    if (elem.startsWith(startString)) {
+    if (typeof elem === 'string' && elem.startsWith(startString)) {
       arr.push(elem.slice(startString.length));
     }
   }
