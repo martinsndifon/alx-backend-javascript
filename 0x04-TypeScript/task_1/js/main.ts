@@ -42,3 +42,23 @@ const printTeacher: printTeacherFunction = (firstName, lastName) => {
   return `${firstName}. ${lastName}`
 }
 console.log(printTeacher("John", "Doe"));
+
+interface forStudentclass {
+  firstName: string;
+  lastName: string;
+}
+
+class StudentClass implements forStudentclass  {
+  constructor(public firstName: string, public lastName: string) {}
+
+  workOnHomework() {
+    return "Currently working";
+  }
+
+  displayName() {
+    return this.firstName;
+  }
+}
+const student1 = new StudentClass("john", "Doe");
+console.log(student1.displayName());
+console.log(student1.workOnHomework());
