@@ -46,4 +46,27 @@ function createEmployee(salary: number | string): Director | Teacher {
   }
 }
 
+console.log(createEmployee(200));
+console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
+
+function isDirector(employee: Director | Teacher) {
+  if (employee instanceof Director) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function executeWork(employee: Director | Teacher) {
+  if (employee instanceof Director) {
+    const director = employee.workDirectorTasks();
+    console.log(director);
+  } else {
+    const teacher = employee.workTeacherTasks();
+    console.log(teacher);
+  }
+}
+console.log(isDirector(createEmployee(100)));
+executeWork(createEmployee(200));
+executeWork(createEmployee(1000));
