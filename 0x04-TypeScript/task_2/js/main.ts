@@ -70,3 +70,17 @@ function executeWork(employee: Director | Teacher) {
 console.log(isDirector(createEmployee(100)));
 executeWork(createEmployee(200));
 executeWork(createEmployee(1000));
+
+interface Subjects {
+  subject: 'Math' | 'History';
+}
+
+function teachClass(todayClass: 'Math' | 'History') {
+  if (todayClass === 'Math') {
+    return "Teaching Math";
+  } else {
+    return "Teaching History";
+  }
+}
+console.log(teachClass("History"));
+console.log(teachClass("Math"));
