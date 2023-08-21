@@ -6,7 +6,6 @@ const app = http.createServer((req, res) => {
   res.end('Hello Holberton School!');
 });
 
-// eslint-disable-next-line jest/require-hook
 app.listen(1245, '127.0.0.1', () => console.log('Server running'));
 
 module.exports = app;
