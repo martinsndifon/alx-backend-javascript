@@ -39,7 +39,10 @@ function countStudents(path) {
       `Number of students in SWE: ${swe}. List: ${sweFirstNames.join(', ')},`
     );
   } catch (err) {
-    throw new Error('Cannot load the database');
+    if (err.code === 'ENOENT') {
+      throw new Error('Cannot load the database');
+    }
+    throw err;
   }
 }
 module.exports = countStudents;
