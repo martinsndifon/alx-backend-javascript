@@ -3,6 +3,9 @@
 const express = require('express');
 const fs = require('fs');
 
+const app = express();
+const port = 1245;
+
 const printStats = (data) => {
   const dataList = data.split('\n').splice(1);
   const stats = { CS: [], SWE: [] };
@@ -40,8 +43,6 @@ const countStudents = (file) =>
     });
   });
 
-const app = express();
-const port = 1245;
 app.get('/', (req, res) => {
   res.send('Hello Holberton School!');
 });
