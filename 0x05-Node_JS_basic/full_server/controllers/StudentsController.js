@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 import readDatabase from '../utils';
 
 const dbFile = process.argv.length > 2 ? process.argv[2] : '';
@@ -9,7 +10,11 @@ class StudentsController {
         res.statusCode = 200;
         res.write('This is the list of our students\n');
         for (const [key, value] of Object.entries(data)) {
-          res.write(`Number of students in ${key}: ${value.length}. List: ${value.join(', ')}`);
+          res.write(
+            `Number of students in ${key}: ${value.length}. List: ${value.join(
+              ', '
+            )}`
+          );
           if (key === 'CS') {
             res.write('\n');
           }
