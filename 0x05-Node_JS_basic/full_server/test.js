@@ -1,7 +1,7 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 
-process.argv[2] = '../database.csv';
+process.argv[2] = './database.csv';
 
 import app from './server';
 
@@ -12,7 +12,7 @@ describe('Full HTTP server using Express', () => {
   describe('/students/:major endpoint', () => {
     describe('When the database is available', () => {
       before(() => {
-        process.argv[2] = '../database.csv';
+        process.argv[2] = './database.csv';
       });
 
       it('Returns the right content', (done) => {
