@@ -1,10 +1,9 @@
 /* eslint-disable comma-dangle */
 import readDatabase from '../utils';
 
-const dbFile = process.argv.length > 2 ? process.argv[2] : '';
+const dbFile = './database.csv';
 class StudentsController {
   static getAllStudents(req, res) {
-    res.statusCode = 200;
     readDatabase(dbFile)
       .then((data) => {
         res.statusCode = 200;
