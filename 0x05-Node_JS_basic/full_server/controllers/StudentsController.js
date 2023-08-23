@@ -1,7 +1,7 @@
 /* eslint-disable comma-dangle */
 import readDatabase from '../utils';
 
-const dbFile = process.argv.length > 2 ? process.argv[2] : '';
+const dbFile = process.argv[2] === undefined ? '' : process.argv[2];
 class StudentsController {
   static getAllStudents(req, res) {
     readDatabase(dbFile)
