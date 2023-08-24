@@ -2,7 +2,7 @@ const sinon = require('sinon');
 const chai = require('chai');
 //const assert = require('assert');
 const Utils = require('./utils');
-const sendPaymentRequestToApi = require('./3-payment');
+const sendPaymentRequestToApi = require('./4-payment');
 
 const expect = chai.expect;
 
@@ -13,7 +13,7 @@ describe('sendPaymentRequestToApi', () => {
       .stub(Utils, 'calculateNumber')
       .returns(10);
 
-    // Add a spy to verify the return of sendPaymentRequestToApi
+    // Add a spy to verify the console.log of sendPaymentRequestToApi
     const consoleLogSpy = sinon.spy(console, 'log');
 
     // Call the function you want to test
