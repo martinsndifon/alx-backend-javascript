@@ -13,11 +13,12 @@ app.get('/cart/:id', (req, res) => {
   const { id } = req.params;
   if (isNaN(id)) {
     res.statusCode = 404;
+    res.setHeader('Content-Type', 'text/html');
     res.send();
   } else {
     res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.send('Payment methods for cart :id');
+    res.setHeader('Content-Type', 'text/html');
+    res.send(`Payment methods for cart ${id}`);
   }
 });
 
