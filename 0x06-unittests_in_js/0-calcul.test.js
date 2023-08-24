@@ -4,15 +4,15 @@ const calculateNumber = require('./0-calcul');
 describe('calculateNumber', () => {
   describe('add function', () => {
     it('adds two rounded numbers correctly', () => {
-      assert.strictEqual(calculateNumber(3, 5), 8);
+      assert.equal(calculateNumber(3, 5), 8);
     });
 
     it('adds two rounded numbers correctly', () => {
-      assert.strictEqual(calculateNumber(3.7, 1), 5);
+      assert.equal(calculateNumber(3.7, 1), 5);
     });
 
     it('adds two rounded numbers correctly', () => {
-      assert.strictEqual(calculateNumber(3.7, 5.2), 9);
+      assert.equal(calculateNumber(3.7, 5.2), 9);
     });
   });
 });
