@@ -7,9 +7,8 @@ const expect = chai.expect;
 
 describe('sendPaymentRequestToApi', () => {
   it('should call Utils.calculateNumber with correct arguments', () => {
-    const calculateNumberStub = sinon
-      .stub(Utils, 'calculateNumber')
-      .returns(10);
+    //prettier-ignore
+    const calculateNumberStub = sinon.stub(Utils, 'calculateNumber').returns(10);
 
     const consoleLogSpy = sinon.spy(console, 'log');
 
